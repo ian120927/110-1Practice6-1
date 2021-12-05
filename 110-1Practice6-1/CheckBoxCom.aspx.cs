@@ -7,19 +7,18 @@ using System.Web.UI.WebControls;
 
 namespace _110_1Practice6_1
 {
-    public partial class CheckBox : System.Web.UI.Page
+    public partial class CheckBoxCom : System.Web.UI.Page
     {
         protected void Page_Load(object sender, EventArgs e)
         {
-            if (ch_V1.Checked == true)
+            if (Request.Form.Get("book") == "buy")
             {
-                Response.Write(ch_V1.Text);
+                Response.Write("要購買書籍");
             }
             else
             {
-                Response.Write(ch_V2.Text);
+                Response.Write("沒有要購買書籍");
             }
-
         }
     }
 }
